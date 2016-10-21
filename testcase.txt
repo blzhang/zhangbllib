@@ -377,8 +377,10 @@ curl -d '{
     "ctorMsg": {
         "function":"init",
         "args":["a", "3000", "b", "2000"]
-    }
-  }
+    },
+    "secureContext": "jim"
+  },
+  "id" : 5
 }' 'http://localhost:7050/chaincode'
 
 
@@ -393,8 +395,10 @@ curl -d '{
     "ctorMsg": {
         "function":"init",
         "args":["event", "1"]
-    }
-  }
+    },
+    "secureContext": "jim"
+  },
+  "id": 15
 }' 'http://localhost:7050/chaincode'
 
 curl -d '{
@@ -403,13 +407,15 @@ curl -d '{
   "params": {
       "type": 1,
       "chaincodeID":{
-          "name":"b98276a02d91054b5301e671106a3f6abe0b1d60c6a143978ce79861f92e1bbaf142257db35c27178284a1ae1fa1b07b3e016f203eafec3b3cc3c8bb67b91c0b"
+          "name":"8c7edf999dc2d7886246261acf299ca09395ef5b9e1b41dc472f3964ca186c12d77e570c622ff501867b9b65190239b6cca4f4c01d4b569ab411ff3f58e70273"
       },
       "ctorMsg": {
          "function":"invoke",
-         "args":["event", "middleSchool", "20cc2c43a8788a6258229c50c17dba0456516cef2e0d439144c91eb47ffc510019da5b8c88e9ee8cc9409d696900d8e5a7adadb276430d82ea786fd0eb1ceb54", "a", "b"]
-      }
-  }
+         "args":["event", "middleSchool", "789107ec44ff66df0567814d946c4f8e56626239c1c3592868a054597d675e7f8f96ad175abcdfc6cda43c09418609ce85c44859a6254ef27cb11cd2ca1a4d48", "a", "b"]
+      },
+      "secureContext": "jim"
+  },
+  "id": 16
 }' 'http://localhost:7050/chaincode'
 
 curl -d '{
@@ -419,13 +425,15 @@ curl -d '{
     "type": 1 ,
     "chaincodeID":{
         "path":"github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02",
-        "name":"20cc2c43a8788a6258229c50c17dba0456516cef2e0d439144c91eb47ffc510019da5b8c88e9ee8cc9409d696900d8e5a7adadb276430d82ea786fd0eb1ceb54"
+        "name":"789107ec44ff66df0567814d946c4f8e56626239c1c3592868a054597d675e7f8f96ad175abcdfc6cda43c09418609ce85c44859a6254ef27cb11cd2ca1a4d48"
     },
     "ctorMsg": {
         "function":"createAccNO",
         "args":["e", "4500"]
-    }
-  }
+    },
+    "secureContext": "jim"
+  },
+  "id": 6
 }' 'http://localhost:7050/chaincode'
 
 curl -d '{
@@ -435,13 +443,15 @@ curl -d '{
     "type": 1 ,
     "chaincodeID":{
         "path":"github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02",
-        "name":"4fddf6f5a73648342bd3b96e656cdef8e0aa49425f01a094f898ecfb706604373ad56d63648512a03a05cdf70c351c743f10a0b9ace6356c0ee50eae1bc41609"
+        "name":"789107ec44ff66df0567814d946c4f8e56626239c1c3592868a054597d675e7f8f96ad175abcdfc6cda43c09418609ce85c44859a6254ef27cb11cd2ca1a4d48"
     },
     "ctorMsg": {
         "function":"transferAcc",
         "args":["a", "e", "4000"]
-    }
-  }
+    },
+    "secureContext": "jim"
+  },
+  "id": 10
 }' 'http://localhost:7050/chaincode'
 
 curl -d '{
@@ -451,13 +461,15 @@ curl -d '{
     "type": 1 ,
     "chaincodeID":{
         "path":"github.com/hyperledger/fabric/examples/chaincode/go/chaincode_example02",
-        "name":"f543e2a1b7c3d8223b9479c273567e464c775141606610a2deb2cf8b29dee486020190c68ac9da497e62525b532f35baef9ece028605cd0f65331cd9a9fbc52f"
+        "name":"789107ec44ff66df0567814d946c4f8e56626239c1c3592868a054597d675e7f8f96ad175abcdfc6cda43c09418609ce85c44859a6254ef27cb11cd2ca1a4d48"
     },
     "ctorMsg": {
         "function":"ECashPrinter",
         "args":["a", "4000"]
-    }
-  }
+    },
+    "secureContext": "jim"
+  },
+  "id": 7
 }' 'http://localhost:7050/chaincode'
 
 
@@ -467,13 +479,15 @@ curl -d '{
   "params": {
       "type": 1,
       "chaincodeID":{
-          "name":"20cc2c43a8788a6258229c50c17dba0456516cef2e0d439144c91eb47ffc510019da5b8c88e9ee8cc9409d696900d8e5a7adadb276430d82ea786fd0eb1ceb54"
+          "name":"789107ec44ff66df0567814d946c4f8e56626239c1c3592868a054597d675e7f8f96ad175abcdfc6cda43c09418609ce85c44859a6254ef27cb11cd2ca1a4d48"
       },
       "ctorMsg": {
          "function":"query",
          "args":["b"]
-      }
-  }
+      },
+    "secureContext": "jim"
+  },
+  "id": 8
 }' 'http://localhost:7050/chaincode'
 
 
